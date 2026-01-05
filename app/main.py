@@ -17,7 +17,6 @@ class Animal:
 
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True):
-        # Wywołujemy konstruktor rodzica (Animal) z apetytem ustawionym na 3
         super().__init__(name, 3, is_hungry)
 
     def catch_mouse(self):
@@ -26,7 +25,6 @@ class Cat(Animal):
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True):
-        # Wywołujemy konstruktor rodzica (Animal) z apetytem ustawionym na 7
         super().__init__(name, 7, is_hungry)
 
     def bring_slippers(self):
@@ -34,7 +32,7 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list):
-    total_food = 0
+    total_food_points = 0
     for animal in animals:
-        total_food += animal.feed()
-    return total_food
+        total_food_points += animal.feed()
+    return total_food_points
